@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prac5</title>
+	</head>
+	<body>
+		<script>
+			function habla(frase)
+			{
+				alert("Juguete dice: "+frase+this.palabra);
+			}
+			function juguete(nom,prec,marc,pal)
+			{
+				this.nombre=nom,
+				this.precio=prec,
+				this.marca=marc,
+				this.palabra=pal,
+				this.habla=habla
+			}
+			var juguete1=new juguete("Carro",10,"Mattel"," correr ");
+			var juguete2=new juguete("Avion",20,"Boomco"," volar ");
+			var juguete3=new juguete("Espada",30,"Toyco"," cortar ");
+			juguete1.habla("Deberias");
+			juguete2.habla("Sabes");
+			juguete3.habla("Te voy a");
+		</script>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tarea2</title>
+	</head>
+	<body>
+		<table>
+		</table>
+		<script>
+			var a;
+			var b;
+			var c;
+			var d;
+			var e;
+			var f;
+			function crear(color)
+			{
+				var cosa=document.createElement("tr");
+				cosa.setAttribute("style","background-color:"+color);
+				return document.querySelector("table").appendChild(cosa);
+			}
+			for(a=0;a<51;a++)
+			{
+				for(b=0;b<10;b++)
+				{
+					for(c=0;c<10;c++)
+					{
+						for(d=0;d<10;d++)
+							crear("#"+b+b+c+c+d+d);
+					}
+				}
+			}		
+		</script>
+	</body>
+</html>

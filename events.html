@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>Events</title>
+		<meta charset="UTF-8"/>
+	</head>
+	<body>
+		<script>
+    
+			function my_apen(obj,elem,txt,attr,in_attr){
+					var ele = document.createElement(elem);
+					
+					var txNode = document.createTextNode(txt);
+					
+					ele.appendChild(txNode);
+					if(attr!=undefined)
+						ele.setAttribute(attr,in_attr);
+					
+					obj.appendChild(ele);
+			}
+			var events=["cl","dbcl","on_m_down--up"];
+			var c_events=["click","dblclick","onmousedown--onmouseup"];
+			for(var ev in events){
+				my_apen(document.body,"div",c_events[ev]);
+				my_apen(document.body.lastElementChild,"button",events[ev],"id",events[ev]);
+				my_apen(document.body,"br","");
+			}
+			
+			
+			
+			//Click
+			document.getElementById("cl").addEventListener("click", function() {
+				alert("Me diste click!");
+			});
+			/*document.getElementById("cl").onclick=function() {
+				alert("Me diste click!");
+			};*/
+			
+			
+			//double click
+			document.getElementById("dbcl").addEventListener("dblclick", function() {
+				alert("Me diste doble click!");
+			});
+			/*document.getElementById("dbcl").ondblclick=function() {
+				alert("Me diste doble click!");
+			};*/
+			
+			
+			
+			//mouse up & down
+			my_apen(document.getElementsByTagName("div")[document.getElementsByTagName("div").length-1],"div","clikea ^^^^","id","div_mouse_up_down");
+			//down
+			/*document.getElementById("on_m_down--up").addEventListener("mousedown", function() {
+				document.getElementById("div_mouse_up_down").innerHTML="mouse down";
+			});*/
+			document.getElementById("on_m_down--up").onmousedown=function() {
+				document.getElementById("div_mouse_up_down").innerHTML="mouse down";
+			};
+			
+			//up
+			/*document.getElementById("on_m_down--up").addEventListener("mouseup", function() {
+				document.getElementById("div_mouse_up_down").innerHTML="mouse up";
+			});*/
+			document.getElementById("on_m_down--up").onmouseup=function() {
+				document.getElementById("div_mouse_up_down").innerHTML="mouse up";
+			};
+		</script>
+	</body>
+</html>

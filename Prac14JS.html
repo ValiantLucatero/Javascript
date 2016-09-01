@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>Prac14</title>
+	</head>
+	<body>
+		Escribe aqui:
+		<input type="text">
+		Lo que escribiste en UNICODE es:
+		<h1></h1>
+		<script>
+			var x=document.getElementsByTagName("input")[0];
+			x.addEventListener('keypress',function(key){
+				document.getElementsByTagName('h1')[0].innerHTML=key.which;});
+		</script>
+	</body>
+</html>

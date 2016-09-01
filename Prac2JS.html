@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prac2</title>
+	</head>
+	<body>
+		<script>
+			var a;
+			var b;
+			var c;
+			var res=0;
+			function potencia(a,b)
+			{
+				if(res==0)
+					c=a*a;
+				else
+					c=res*a;
+				res=c;
+				b--;
+				if(b!=1)
+					potencia(a,b);
+				return res;
+			}
+			a=prompt("Elige un numero:","textoDefault");
+			b=prompt("A que potencia lo quieres elevar?","textoDefault");
+			res=potencia(a,b);
+			alert(res);
+		</script>
+	</body>
+</html>

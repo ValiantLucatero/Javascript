@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prac15</title>
+	</head>
+	<body>
+		Ingresa palabra:
+		<input type="text"/><br>
+		Ingresa palabra por la que la cambiarias:
+		<input type="text"/><br>
+		<button>Cambiar</button>
+		<h1>Hola soy una oracion.</h1>
+		<script>
+			document.getElementsByTagName("button")[0].onclick=function()
+			{
+				var a=document.getElementsByTagName("input")[0].value;
+				var b=document.getElementsByTagName("input")[1].value;
+				var c=document.getElementsByTagName("h1")[0].innerHTML;
+				c=c.replace(b,a);
+				document.getElementsByTagName("h1")[0].innerHTML=c;
+			};
+		</script>
+		<script type='text/javascript' src='jquery-2.2.3.js'></script>
+	</body>
+</html>

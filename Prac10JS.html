@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prac10</title>
+	</head>
+	<body>
+		<h1>Hola</h1>
+		<div>Quiobo</div>
+		<script>
+			function crear(tipo,texto,donde,atributo,dato)
+			{
+				var cosa=document.createElement(tipo);
+				var tx=document.createTextNode(texto);
+				cosa.setAttribute(atributo,dato);
+				cosa.appendChild(tx);
+				return document.querySelector(donde).appendChild(cosa);
+			}
+			crear("div","holi","div","background-color","red");
+		</script>
+	</body>
+</html>

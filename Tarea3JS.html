@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tarea3</title>
+	</head>
+	<body>
+		<script>
+			var rev=0;
+			var arr3=0;
+			var arr4=0;
+			var a=prompt("Introduce una cadena","textoDefault");
+			var arr=a.split(" ");
+			var len=arr.length;
+			alert("Tu cadena mide:"+len,"textoDefault");
+			var alf=arr;
+			alf.sort();
+			alert("En orden alfabetico:"+alf,"textoDefault");
+			rev=arr;
+			rev.reverse();
+			alert("En reversa:"+rev,"textoDefault");
+			arr3=arr;
+			var uno=arr3.shift();
+			alert(uno,"textoDefault");
+			arr4=arr;
+			var ult=arr4.pop();
+			alert(ult,"textoDefault");
+		</script>
+	</body>
+</html>

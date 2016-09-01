@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prac11</title>
+	</head>
+	<body>
+		<h1>Hola</h1>
+		<p>Quiobo</p>
+		<script>
+			var a;
+			var b;
+			var c;
+			var d;
+			var e;
+			var f=0;
+			var g=0;
+			var i=0;
+			var n=0;
+			function crear(tipo,texto,donde,atributo,dato)
+			{
+				var cosa=document.createElement(tipo);
+				var tx=document.createTextNode(texto);
+				cosa.setAttribute(atributo,dato);
+				cosa.appendChild(tx);
+				return document.querySelector(donde).appendChild(cosa);
+			}
+			a=prompt("Etiqueta","textoDefault");
+			b=prompt("Texto","textoDefault");
+			c=prompt("Lugar","textoDefault");
+			d=prompt("Atributo?","textoDefault");
+			e=prompt("Dato?","textoDefault");
+			f=confirm("Quieres imprimirlo?");
+			while(f==1)
+			{
+				crear(a,b,c,d,e);
+				f=confirm("Quieres imprimirlo?");
+				i++;
+			}
+			var padre=document.getElementsByTagName('p')[0];
+			g=confirm("Quieres borrarlo?");
+			while(n!=i-1)
+			{
+				var hijo=document.getElementsByTagName(a)[n];
+				padre.removeChild(hijo);
+				confirm("Quieres borrarlo?");
+				n++;
+			}
+		</script>
+	</body>
+</html>

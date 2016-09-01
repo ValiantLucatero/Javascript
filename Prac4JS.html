@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prac4</title>
+	</head>
+	<body>
+		<script>
+			var juguete1={nombre:"Carro",precio:10,marca:"Mattel",palabra:" correr ",habla:habla};
+			var juguete2={nombre:"Avion",precio:20,marca:"Boomco",palabra:" volar ",habla:habla};
+			var juguete3={nombre:"Espada",precio:30,marca:"Toyco",palabra:" cortar ",habla:habla};
+			var frase;
+			function habla(frase)
+			{
+				alert("Juguete dice: "+frase+this.palabra);
+			}
+			juguete1.habla("Deberias");
+			juguete2.habla("Sabes");
+			juguete3.habla("Te voy a");
+		</script>
+	</body>
+</html>

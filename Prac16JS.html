@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prac16</title>
+	</head>
+	<body>
+		<script>
+			var a=prompt("Escribe algo:","textoDefault");
+			var b=a.split("");
+			function crear(tipo,texto,donde)
+			{
+				var cosa=document.createElement(tipo);
+				var tx=document.createTextNode(texto);
+				cosa.appendChild(tx);
+				return document.querySelector(donde).appendChild(cosa);
+			}
+			for(var c in b)
+				crear("div",b[c],"body");
+		</script>
+	</body>
+</html>
