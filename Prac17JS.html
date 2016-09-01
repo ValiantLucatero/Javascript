@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Prac17</title>
+	</head>
+	<body>
+		<input type="text">
+		<button>Checar</button><br>
+		<div></div>
+		<script>
+			document.getElementsByTagName("button")[0].onclick=function()
+			{
+				var xmlhttp=new XMLHttpRequest();
+				var str=document.getElementsByTagName("input")[0].value;
+				xmlhttp.onreadystatechange=function()
+				{
+					if(xmlhttp.readyState==4 && xmlhttp.status==200)
+						document.getElementsByTagName("div")[0].innerHTML=xmlhttp.responseText;
+				};
+				xmlhttp.open("GET","Prac17.5JS.php?r=" + str, true);
+				xmlhttp.send();
+			};
+		</script>
+	</body>
+</html>
